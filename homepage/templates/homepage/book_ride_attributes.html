@@ -1,0 +1,90 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Book Ride Attributes</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        .book-ride-attributes-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .book-ride-attributes-title {
+            font-size: 28px;
+            color: #333;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .ride-details-section {
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #ccc;
+        }
+
+        .ride-details-title {
+            font-size: 24px;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .ride-details-content {
+            font-size: 18px;
+            color: #666;
+        }
+
+        .buttons-container {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+
+        .back-button,
+        .confirm-button {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            text-decoration: none;
+            color: #ffffff;
+            background-color: #007bff;
+            transition: background-color 0.2s ease-in-out;
+        }
+
+        .confirm-button:hover,
+        .back-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="book-ride-attributes-container">
+        <h1 class="book-ride-attributes-title">Book Ride Attributes Page</h1>
+        
+        <div class="ride-details-section">
+            <h2 class="ride-details-title">Ride Details</h2>
+            <p class="ride-details-content"></p>
+        </div>
+
+        <!-- Add more sections for additional information, payment, confirm, receipt, ratings, feedback -->
+
+        <div class="buttons-container">
+            <a class="back-button" href="{% url 'passenger_attributes' %}">Back</a>
+            <a class="confirm-button" href="#">Confirm</a>
+        </div>
+    </div>
+</body>
+</html>

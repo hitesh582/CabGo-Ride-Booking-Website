@@ -1,0 +1,42 @@
+<!-- templates/homepage/bookings.html -->
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bookings</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <div class="bookings-container">
+        <h1 class="page-title">Bookings</h1>
+        
+        <div class="booking-card">
+            <div class="booking-header">
+                <h2>Upcoming Ride</h2>
+                <span class="booking-status">Scheduled</span>
+            </div>
+            <div class="booking-details">
+                <p><span class="booking-label">Date:</span></p>
+                <p><span class="booking-label">Time:</span></p>
+                <p><span class="booking-label">From:</span></p>
+                <p><span class="booking-label">To:</span></p>
+            </div>  
+        </div>
+
+        <div class="booking-card">
+            <div class="booking-header">
+                <h2>Completed Ride</h2>
+                <span class="booking-status completed">Completed</span>
+            </div>
+            <div class="booking-details">
+                <p><span class="booking-label">Date:</span> </p>
+                <p><span class="booking-label">Time:</span> </p>
+                <p><span class="booking-label">From:</span></p>
+                <p><span class="booking-label">To:</span> </p>
+            </div>
+        </div>
+
+        <!-- Add more booking cards for different rides -->
+    </div>
+</body>
+</html>

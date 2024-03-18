@@ -1,0 +1,37 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Notifications</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <div class="page-container">
+        <header class="page-header">
+            <h1>Notifications</h1>
+        </header>
+        <section class="page-content">
+            <div class="notification">
+                <div class="notification-icon">
+                    <img src="{% static 'images/rideofferlogo.jpg' %}" alt="Notification Icon">
+                </div>
+                <div class="notification-details">
+                    <h2 class="notification-title">New Ride Offer</h2>
+                    <p class="notification-description">You have received a new ride offer from a driver. Don't miss out on this opportunity!</p>
+                </div>
+            </div>
+            <div class="notification">
+                <div class="notification-icon">
+                    <img src="{% static 'images/accountupdatelogo.png' %}" alt="Notification Icon">
+                </div>
+                <div class="notification-details">
+                    <h2 class="notification-title">Account Update</h2>
+                    <p class="notification-description">Please update your account information to ensure a smooth experience while using our services.</p>
+                </div>
+            </div>
+            <!-- Add more notification items as needed -->
+        </section>
+    </div>
+</body>
+</html>

@@ -1,0 +1,124 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Edit Profile</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-image: url("{% static 'images/4k-minimalist-mountains.jpg' %}");
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        .edit-profile-container {
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+            width: 80%;
+            max-width: 600px;
+            margin: 100px auto;
+            padding: 20px;
+        }
+        .page-title {
+            text-align: center;
+            color: #3498db;
+            margin-bottom: 20px;
+        }
+        .form-section {
+            margin-bottom: 20px;
+        }
+        .form-section-title {
+            color: #333;
+            margin-bottom: 10px;
+        }
+        .form-label {
+            display: block;
+            margin-bottom: 5px;
+            color: #555;
+        }
+        .form-input,
+        .form-select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+        .form-button {
+            background-color: #3498db;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 15px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            width: 100%;
+        }
+        .form-button:hover {
+            background-color: #297db6;
+        }
+        .form-link {
+            display: block;
+            text-align: center;
+            margin-top: 10px;
+            color: #3498db;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="edit-profile-container">
+        <h1 class="page-title">Edit Profile</h1>
+        
+        <form class="edit-profile-form" method="POST">
+            {% csrf_token %}
+            
+            <!-- Profile Picture -->
+            <div class="form-section">
+                <label class="form-label" for="profile_picture">Profile Picture:</label>
+                <input class="form-input" type="file" name="profile_picture" id="profile_picture">
+            </div>
+            
+            <!-- Personal Information -->
+            <div class="form-section">
+                <h2 class="form-section-title">Personal Information</h2>
+                <label class="form-label" for="first_name">First Name:</label>
+                <input class="form-input" type="text" name="first_name">
+                <label class="form-label" for="last_name">Last Name:</label>
+                <input class="form-input" type="text" name="last_name">
+                <!-- Add more personal information fields as needed -->
+            </div>
+            
+            <!-- Preferences -->
+            <div class="form-section">
+                <h2 class="form-section-title">Preferences</h2>
+                <label class="form-label" for="language">Preferred Language:</label>
+                <select class="form-select" name="language" id="language">
+                    <option value="en">English</option>
+                    <option value="fr">French</option>
+                    <!-- Add more language options as needed -->
+                </select>
+                <!-- Add more preference fields as needed -->
+            </div>
+            
+            <!-- Security Settings -->
+            <div class="form-section">
+                <h2 class="form-section-title">Security Settings</h2>
+                <label class="form-label" for="username">Username:</label>
+                <input class="form-input" type="text" name="username">
+                <label class="form-label" for="password">Password:</label>
+                <input class="form-input" type="password" name="password">
+                <!-- Add more security setting fields as needed -->
+            </div>
+            
+            <!-- Save and Back links -->
+            <input class="form-button" type="submit" value="Save">
+            <a class="form-link" href="{% url 'login_attributes' %}">Back</a>
+        </form>
+    </div>
+</body>
+</html>

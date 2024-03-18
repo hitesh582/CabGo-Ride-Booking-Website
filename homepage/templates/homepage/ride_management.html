@@ -1,0 +1,68 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ride Management</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        .ride-management-container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .ride-management-title {
+            font-size: 36px;
+            color: #333;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        .ride-management-list {
+            list-style: none;
+            padding: 0;
+            margin-top: 20px;
+            text-align: left;
+        }
+
+        .ride-management-list li {
+            margin-bottom: 10px;
+        }
+
+        .ride-management-list a {
+            color: #007bff;
+            text-decoration: none;
+            font-size: 18px;
+            transition: color 0.2s ease-in-out;
+        }
+
+        .ride-management-list a:hover {
+            color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="ride-management-container">
+        <h1 class="ride-management-title">Ride Management Page</h1>
+        <ul class="ride-management-list">
+            <li><a href="{% url 'manage_rides_page' %}">Manage Rides</a></li>
+            <li><a href="{% url 'payment_details_page' %}">Payment Details</a></li>
+            <li><a href="{% url 'reviews_ratings_page' %}">Reviews and Ratings</a></li>
+            <li><a href="{% url 'driver_analytics_page' %}">Driver Analytics</a></li>
+            <li><a href="{% url 'driver_attributes_page' %}">Logout</a></li>
+        </ul>
+    </div>
+</body>
+</html>

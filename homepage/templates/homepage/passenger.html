@@ -1,0 +1,100 @@
+{% comment %} {% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Passenger Page</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <div class="container">
+        <img src="{% static 'images/passengercabblogo.png' %}">
+        <h1 class="heading">Welcome, you are on the Passenger page!</h1>
+        <p class="sub-text">Whether you're a new user or returning, we're here to serve you.</p>
+        <div class="button-container">
+            <form action="{% url 'register_page' %}" method="get">
+                <button class="btn-register" type="submit">Register</button>
+            </form>
+            <form action="{% url 'login_page' %}" method="get">
+                <button class="btn-login" type="submit">Login</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html> {% endcomment %}
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Passenger Page</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-image: url("{% static 'images/pass_Back.jpg' %}");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        
+        .logo {
+            max-width: 200px;
+            margin-bottom: 20px;
+        }
+        
+        .hero-heading {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            color: white;
+            text-align: center;
+        }
+        
+        .hero-subtext {
+            font-size: 1.2rem;
+            color: white;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .btn-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .btn {
+            padding: 10px 20px;
+            font-size: 1rem;
+            color: white;
+            background-color: #007bff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 0 10px;
+            transition: background-color 0.3s;
+        }
+        
+        .btn:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <img class="logo" src="{% static 'images/passengercabblogo.png' %}" alt="PassengerCab Logo">
+    <h1 class="hero-heading">Welcome to the Passenger Page!</h1>
+    <p class="hero-subtext">Whether you're new here or a returning passenger, we're here to provide you with a seamless experience.</p>
+    <div class="btn-container">
+        <a href="{% url 'register_page' %}" class="btn">Register</a>
+        <a href="{% url 'login_page' %}" class="btn">Login</a>
+    </div>
+</body>
+</html>

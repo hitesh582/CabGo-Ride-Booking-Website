@@ -1,0 +1,66 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Book Ride</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        .book-ride-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .book-ride-title {
+            font-size: 28px;
+            color: #333;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .book-ride-options {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        .book-ride-button {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            text-decoration: none;
+            color: #ffffff;
+            background-color: #007bff;
+            margin: 0 10px;
+            transition: background-color 0.2s ease-in-out;
+        }
+
+        .book-ride-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="book-ride-container">
+        <h1 class="book-ride-title">Book Ride Page</h1>
+        <p>Do you want to book a ride?</p>
+        <div class="book-ride-options">
+            <a class="book-ride-button" href="{% url 'book_ride_attributes_page' %}">Yes</a>
+            <a class="book-ride-button" href="{% url 'passenger_attributes' %}">No</a>
+        </div>
+    </div>
+</body>
+</html>

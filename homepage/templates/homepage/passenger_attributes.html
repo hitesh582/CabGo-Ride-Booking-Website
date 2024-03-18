@@ -1,0 +1,75 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Passenger Attributes Page</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
+    <style>
+        /* Add custom styles here */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 0;
+        }
+
+        .passenger-attributes-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .passenger-attributes-title {
+            font-size:80px;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .passenger-attributes-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .passenger-attributes-li {
+            margin: 20px 0;
+        }
+
+        .passenger-attributes-link {
+            color: #007bff;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        .passenger-attributes-link:hover {
+            color: #0056b3;
+        }
+
+        .passenger-attributes-image {
+            max-width: 200px; /* Increase the size as desired */
+            height: auto;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="passenger-attributes-container">
+        <h1 class="passenger-attributes-title">Explore Your Passenger Attributes</h1>
+        <img src="{% static 'images/passenger.jpg' %}">
+
+        <ul class="passenger-attributes-list">
+            <li class="passenger-attributes-li"><a class="passenger-attributes-link" href="{% url 'features_page' %}">Discover Exciting Features</a></li>
+            <li class="passenger-attributes-li"><a class="passenger-attributes-link" href="{% url 'pricing_page' %}">Check Out Our Flexible Pricing</a></li>
+            <li class="passenger-attributes-li"><a class="passenger-attributes-link" href="{% url 'notifications_page' %}">Stay Updated with Notifications</a></li>
+            <li class="passenger-attributes-li"><a class="passenger-attributes-link" href="{% url 'help_and_support_page' %}">Get Help and Support</a></li>
+            <li class="passenger-attributes-li"><a class="passenger-attributes-link" href="{% url 'terms_of_service_page' %}">Read Our Terms of Service</a></li>
+            <li class="passenger-attributes-li"><a class="passenger-attributes-link" href="{% url 'privacy_policy_page' %}">Review Our Privacy Policy</a></li>
+            <li class="passenger-attributes-li"><a class="passenger-attributes-link" href="{% url 'about_us_page' %}">Learn About Us</a></li>
+        </ul>
+    </div>
+</body>
+</html>
+

@@ -1,0 +1,83 @@
+{% load static %}
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Features</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
+    <style>
+        /* Add custom styles here */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 0;
+        }
+
+        .features-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .features-title {
+            font-size: 32px;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .feature {
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 20px;
+            margin: 20px 0;
+            background-color: #fff;
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .feature-icon {
+            font-size: 48px;
+            color: #007bff;
+        }
+
+        .feature-title {
+            font-size: 24px;
+            color: #333;
+            margin-top: 10px;
+        }
+
+        .feature-description {
+            font-size: 16px;
+            color: #666;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="features-container">
+        <h1 class="features-title">Discover Exciting Features</h1>
+
+        <div class="feature">
+            <div class="feature-icon">&#x1F697;</div>
+            <h2 class="feature-title">Real-time Tracking</h2>
+            <p class="feature-description">Track the location of your ride in real-time, so you always know where you are.</p>
+        </div>
+
+        <div class="feature">
+            <div class="feature-icon">&#x1F4B8;</div>
+            <h2 class="feature-title">Multiple Payment Options</h2>
+            <p class="feature-description">Choose from various payment methods, including credit/debit cards and mobile wallets.</p>
+        </div>
+
+        <div class="feature">
+            <div class="feature-icon">&#x1F64B;</div>
+            <h2 class="feature-title">User-friendly Interface</h2>
+            <p class="feature-description">Our app is designed with a user-friendly interface for an enjoyable experience.</p>
+        </div>
+        
+        <!-- Add more feature blocks as needed -->
+    </div>
+</body>
+</html>

@@ -1,0 +1,212 @@
+{% load static %}
+{% comment %} 
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Register Page</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <div class="registration-container">
+        <h1 class="registration-title">Welcome to the Registration Page!</h1>
+
+        <form class="registration-form" method="POST">
+            {% csrf_token %}
+
+            <!-- Profile Picture -->
+            <div class="form-section">
+                <label class="form-label" for="profile_picture">Profile Picture:</label>
+                <input class="form-input" type="file" name="profile_picture" id="profile_picture">
+            </div>
+
+            <!-- Current Details -->
+            <div class="form-section">
+                <h2 class="form-section-title">Current Details</h2>
+                <label class="form-label" for="first_name">First Name:</label>
+                <input class="form-input" type="text" name="first_name">
+                <label class="form-label" for="last_name">Last Name:</label>
+                <input class="form-input" type="text" name="last_name">
+            </div>
+
+            <!-- Personal Information -->
+            <div class="form-section">
+                <h2 class="form-section-title">Personal Information</h2>
+                <label class="form-label" for="email">Email:</label>
+                <input class="form-input" type="email" name="email">
+                <label class="form-label" for="phone">Phone Number:</label>
+                <input class="form-input" type="tel" name="phone">
+            </div>
+
+            <!-- Preferences -->
+            <div class="form-section">
+                <h2 class="form-section-title">Preferences</h2>
+                <label class="form-label" for="language">Preferred Language:</label>
+                <select class="form-select" name="language" id="language">
+                    <option value="en">English</option>
+                    <option value="fr">French</option>
+                </select>
+            </div>
+
+            <!-- Security Settings -->
+            <div class="form-section">
+                <h2 class="form-section-title">Security Settings</h2>
+                <label class="form-label" for="username">Username:</label>
+                <input class="form-input" type="text" name="username">
+                <label class="form-label" for="password">Password:</label>
+                <input class="form-input" type="password" name="password" >
+            </div>
+
+            <!-- Activity Log -->
+            <div class="form-section">
+                <h2 class="form-section-title">Activity Log</h2>
+                <p class="form-activity-log">Activity log can be displayed here based on user actions.</p>
+            </div>
+            <button class="form-submit-button" type="submit" >Create Account</button>
+
+        </form>
+        <a class="back-link" href="{% url 'passenger_page' %}">Back</a>
+    </div>
+</body>
+</html> {% endcomment %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Page</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-image: url("{% static 'images/register_page_back.jpg' %}");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .registration-container {
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 30px;
+            border-radius: 10px;
+            max-width: 600px;
+            width: 100%;
+            text-align: center;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        
+        .registration-title {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        
+        .form-section {
+            margin: 20px 0;
+            text-align: left;
+        }
+        
+        .form-section-title {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            color: #555;
+        }
+        
+        .form-label {
+            display: block;
+            font-size: 1rem;
+            margin-bottom: 5px;
+            color: #555;
+        }
+        
+        .form-input, .form-select {
+            width: 100%;
+            padding: 10px;
+            font-size: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        
+        .form-activity-log {
+            font-size: 1rem;
+            color: #777;
+        }
+        
+        .form-submit-button {
+            padding: 10px;
+            font-size: 1rem;
+            color: white;
+            background-color: #007bff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        
+        .form-submit-button:hover {
+            background-color: #0056b3;
+        }
+        
+        .back-link {
+            display: inline-block;
+            margin-top: 20px;
+            font-size: 1rem;
+            color: #007bff;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="registration-container">
+        <h1 class="registration-title">Welcome to the Registration Page!</h1>
+        <form class="registration-form" method="POST">
+            {% csrf_token %}
+            <div class="form-section">
+                <label class="form-label" for="profile_picture">Profile Picture:</label>
+                <input class="form-input" type="file" name="profile_picture" id="profile_picture">
+            </div>
+            <div class="form-section">
+                <h2 class="form-section-title">Current Details</h2>
+                <label class="form-label" for="first_name">First Name:</label>
+                <input class="form-input" type="text" name="first_name">
+                <label class="form-label" for="last_name">Last Name:</label>
+                <input class="form-input" type="text" name="last_name">
+            </div>
+            <div class="form-section">
+                <h2 class="form-section-title">Personal Information</h2>
+                <label class="form-label" for="email">Email:</label>
+                <input class="form-input" type="email" name="email">
+                <label class="form-label" for="phone">Phone Number:</label>
+                <input class="form-input" type="tel" name="phone">
+            </div>
+            <div class="form-section">
+                <h2 class="form-section-title">Preferences</h2>
+                <label class="form-label" for="language">Preferred Language:</label>
+                <select class="form-select" name="language" id="language">
+                    <option value="en">English</option>
+                    <option value="fr">French</option>
+                </select>
+            </div>
+            <div class="form-section">
+                <h2 class="form-section-title">Security Settings</h2>
+                <label class="form-label" for="username">Username:</label>
+                <input class="form-input" type="text" name="username">
+                <label class="form-label" for="password">Password:</label>
+                <input class="form-input" type="password" name="password" >
+            </div>
+            <div class="form-section">
+                <h2 class="form-section-title">Activity Log</h2>
+                <p class="form-activity-log">Activity log can be displayed here based on user actions.</p>
+            </div>
+            <button class="form-submit-button" type="submit" >Create Account</button>
+        </form>
+        <a class="back-link" href="{% url 'passenger_page' %}">Back</a>
+    </div>
+</body>
+</html>

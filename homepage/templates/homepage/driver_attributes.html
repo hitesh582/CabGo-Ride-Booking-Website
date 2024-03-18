@@ -1,0 +1,67 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Driver Attributes</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        .driver-attributes-container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .driver-attributes-title {
+            font-size: 36px;
+            color: #333;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        .driver-attributes-list {
+            list-style: none;
+            padding: 0;
+            margin-top: 20px;
+            text-align: left;
+        }
+
+        .driver-attributes-list li {
+            margin-bottom: 10px;
+        }
+
+        .driver-attributes-list a {
+            color: #007bff;
+            text-decoration: none;
+            font-size: 18px;
+            transition: color 0.2s ease-in-out;
+        }
+
+        .driver-attributes-list a:hover {
+            color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="driver-attributes-container">
+        <h1 class="driver-attributes-title">Driver Attributes Page</h1>
+        <ul class="driver-attributes-list">
+            <li><a href="{% url 'vehicle_verification_page' %}">Vehicle Verification</a></li>
+            <li><a href="{% url 'notifications_area_page' %}">Notifications Area</a></li>
+            <li><a href="{% url 'conversations_panel_page' %}">Conversations Panel</a></li>
+            <li><a href="{% url 'ride_management_page' %}">Ride Management</a></li>
+        </ul>
+    </div>
+</body>
+</html>

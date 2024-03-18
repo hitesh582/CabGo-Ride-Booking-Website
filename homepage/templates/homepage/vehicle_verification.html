@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  .top-strip {
+    background-color: black;
+    height: 65px;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    color: white;
+  }
+
+  .cabgo-text {
+    font-size: 30px;
+    margin-left: 45px;
+  }
+
+  .sub-text {
+    font-size: 15px;
+    opacity: 1;
+  }
+  
+  .content-wrapper {
+    display: flex;
+    margin-top: 20px;
+    margin-left: 20px;
+  }
+  
+  .white-rectangle {
+    background-color: white;
+    width: 200px;
+    height: 300px;
+    border: 1px solid #ccc;
+    padding: 20px;
+  }
+  
+  /* Style for the dropdown button */
+  .dropdown-button {
+    background-color: transparent;
+    color: white;
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s; /* Add transition for background-color */
+    margin-left: 35px;
+  }
+  
+  /* Change button background on hover */
+  .dropdown-button:hover {
+    background-color: rgba(255, 255, 255, 0.3); /* Slightly opaque white background on hover */
+  }
+
+</style>
+<title>Webpage Layout</title>
+</head>
+<body>
+  <div class="top-strip">
+    <div class="cabgo-text">CabGo</div>
+    <!-- Dropdown button -->
+    <button class="dropdown-button">Company &#9662;</button>
+  </div>
+  <div class="content-wrapper">
+    <div class="white-rectangle">
+      <!-- Content for the white rectangle goes here -->
+      <p>This is the content inside the white rectangle.</p>
+    </div>
+    <!-- Additional content can go here -->
+  </div>
+</body>
+</html>

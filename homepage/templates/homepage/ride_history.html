@@ -1,0 +1,42 @@
+<!-- templates/homepage/ride_history.html -->
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ride History</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <div class="ride-history-container">
+        <h1 class="page-title">Ride History</h1>
+        
+        <div class="ride-history-card">
+            <div class="ride-history-header">
+                <h2>Completed Ride</h2>
+                <span class="ride-history-status completed">Completed</span>
+            </div>
+            <div class="ride-history-details">
+                <p><span class="ride-history-label">Date:</span> </p>
+                <p><span class="ride-history-label">Time:</span> </p>
+                <p><span class="ride-history-label">From:</span> </p>
+                <p><span class="ride-history-label">To:</span> </p>
+            </div>
+        </div>
+
+        <div class="ride-history-card">
+            <div class="ride-history-header">
+                <h2>Cancelled Ride</h2>
+                <span class="ride-history-status cancelled">Cancelled</span>
+            </div>
+            <div class="ride-history-details">
+                <p><span class="ride-history-label">Date:</span> </p>
+                <p><span class="ride-history-label">Time:</span> </p>
+                <p><span class="ride-history-label">From:</span></p>
+                <p><span class="ride-history-label">To:</span> </p>
+            </div>
+        </div>
+
+        <!-- Add more ride history cards for different rides -->
+    </div>
+</body>
+</html>

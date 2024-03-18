@@ -1,0 +1,22 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pricing</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <div class="pricing-container">
+        <p>Have you disabled pricing on not?</p>
+        <div class="button-container">
+            <form action="{% url 'disabled_attributes_page' %}" method="get">
+                <button class="btn-register" type="submit">Yes</button>
+            </form>
+            <form action="{% url 'passenger_attributes' %}" method="get">
+                <button class="btn-login" type="submit">No</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

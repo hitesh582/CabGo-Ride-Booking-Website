@@ -1,0 +1,67 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Disabled Attributes</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        .disabled-attributes-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .disabled-attributes-title {
+            font-size: 28px;
+            color: #333;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .disabled-attributes-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .disabled-attributes-item {
+            margin-bottom: 10px;
+            padding: 10px;
+            background-color: #f0f0f0;
+            border-radius: 5px;
+        }
+
+        .disabled-attributes-item a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
+
+        .disabled-attributes-item a:hover {
+            color: #007bff;
+        }
+    </style>
+</head>
+<body>
+    <div class="disabled-attributes-container">
+        <h1 class="disabled-attributes-title">Disabled Attributes Page</h1>
+        <ul class="disabled-attributes-list">
+            <li class="disabled-attributes-item"><a href="{% url 'search_page' %}">Search Page</a></li>
+            <li class="disabled-attributes-item"><a href="{% url 'filters_page' %}">Filters Page</a></li>
+            <li class="disabled-attributes-item"><a href="{% url 'results_page' %}">Results Page</a></li>
+            <li class="disabled-attributes-item"><a href="{% url 'book_ride_page' %}">Book Ride Page</a></li>
+        </ul>
+    </div>
+</body>
+</html>
